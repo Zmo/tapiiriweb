@@ -1,0 +1,16 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+.container
+  h1 Upcoming events
+
+  ul
+    li(ng-repeat="event in events")
+      span {{ event.name }}
+      span {{ event.time }}
+
+  h2 Make a new event
+
+  div
+    input(type="text" ng-model="newEvent.name")
+    input(type="date" ng-model="newEvent.time")
+    button(ng-click="addEvent()") Add

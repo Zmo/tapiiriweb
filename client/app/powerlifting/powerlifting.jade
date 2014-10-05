@@ -1,0 +1,11 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+.container
+  h1 All powerlifts
+  ul
+    li(ng-repeat="powerlift in powerlifts")
+      span {{ powerlift.name }}
+
+  div
+    input(type="text", ng-model="newPowerlift.name")
+    button(ng-click="addPowerlift()") Lisää

@@ -1,0 +1,109 @@
+@import "font-awesome/css/font-awesome.css"
+
+//
+// Font Awesome Fonts
+//
+
+@font-face
+  font-family: 'FontAwesome'
+  src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0')
+  src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+  url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+  url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+  url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal
+  font-style: normal
+
+//
+// App-wide Styles
+//
+
+.browsehappy
+    background #ccc
+    color #000
+    margin 0.2em 0
+    padding 0.2em 0
+
+// Responsive: Portrait tablets and up
+@media screen and (min-width: 768px)
+    .container
+        max-width 730px
+
+html
+  height 100%
+
+body
+  background-image url("/assets/images/background.png")
+  min-height 100%
+
+.navbar, .container
+  background-image none
+  position relative
+  height 100%
+  min-width 1200px
+  max-width 60%
+  margin-left auto
+  margin-right auto
+  border-left 5px solid black
+  border-right 5px solid black
+
+.navbar
+  background-color grey
+  margin-top 20px
+  img
+    width 100%
+    border-top 5px solid black
+    border-bottom 5px solid black
+
+  ul
+    -webkit-margin-before 0px
+    -webkit-margin-after 0px
+    -webkit-padding-start 0px
+    margin -8px 0px 0px 65px
+    padding 0px 0px 0px 0px
+
+  li
+    width 200px
+    text-align center
+    background-color darkgray
+    display inline-block
+    border-left 5px solid black
+    border-top 5px solid black
+    border-bottom 5px solid black
+    &:last-child
+      border-right 5px solid black
+
+  a
+    display block
+    padding-top 7px
+    width 200px
+    height 30px
+    font-weight bold
+    font-size 22px
+    text-decoration none
+    color black
+    &:visited
+      color black
+    &:hover
+      color white
+      background-color black
+  a.active
+    color white
+    background-color black
+
+.container
+  background-color grey
+  border-bottom 5px solid black
+  min-height 1000px
+  height 100%
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.styl';
+@import 'admin/admin.styl';
+@import 'esports/esports.styl';
+@import 'events/events.styl';
+@import 'main/main.styl';
+@import 'powerlifting/powerlifting.styl';
+@import 'software/software.styl';
+// endinjector

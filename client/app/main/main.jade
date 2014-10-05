@@ -1,0 +1,26 @@
+div(ng-include='"components/navbar/navbar.html"')
+.container
+  //
+    .container
+      .row
+        .col-lg-12
+          h1.page-header Features:
+          ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
+            li
+              a(href='#', tooltip='{{thing.info}}')
+                | {{thing.name}}
+                button.close(type='button', ng-click='deleteThing(thing)') ×
+
+      form.thing-form
+        label Syncs in realtime across clients
+        p.input-group
+          input.form-control(type='text', placeholder='Add a new thing here.', ng-model='newThing')
+          span.input-group-btn
+            button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
+
+  a.twitter-timeline(href="https://twitter.com/babytapirs",
+  data-widget-id="518751999643238400",
+  data-theme="dark",
+  width="400",
+  height="400") Tweets by @babytapirs
+  script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

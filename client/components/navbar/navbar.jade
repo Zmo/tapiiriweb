@@ -1,0 +1,5 @@
+div.navbar(ng-controller="NavbarCtrl")
+  img(src="../../assets/images/header.png")
+  ul
+    li(ng-repeat="item in items")
+      a(href="{{ item.link }}", ng-class="{active: isActive(item.link)}") {{ item.title }}
